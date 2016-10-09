@@ -1,0 +1,26 @@
+{% extends "advertising/base.html" %}
+        {% block page %}
+        <div class="panel panel-default">    
+                <div class="panel-body">
+                <h2>Задайте еще несколько параметров:</h2>
+                <form method="post" >
+                {% csrf_token %}
+                    <center>
+                        
+                        {% for field in form %}
+                        
+                                {{ field.errors }}
+                                {{ field.label_tag }} {{ field }}
+                            
+                        {% endfor %}
+                        
+                        
+                        <input type="submit"  href="/hands/" class="btn btn-primary" role="button" type="submit" value="Продолжить" />
+                    </center>
+
+                </form>
+                    
+                </div>
+            </div>
+            
+        {% endblock page %}    

@@ -1,0 +1,50 @@
+{% extends "advertising/base.html" %}
+        {% block page %}
+        <div class="panel panel-default">    
+                <div class="panel-body">
+                <h2>Задайте еще несколько параметров:</h2>
+                    <table class="table">
+                    <tbody>
+                        
+                        
+                        <form method="post" action="{% url 'results' %}">
+                {% csrf_token %}
+                   
+                            <tr>
+                            {% for field in form %}
+                            
+                                
+                            {%for e in  field.errors %}
+                                <td><c style="color:red;">{{e}}</c></td>
+                            {%endfor%}
+                                
+                            
+                            
+                            
+                        {% endfor %}
+                                </tr>
+                        <tr>
+                        
+                            {% for field in form %}
+                                
+                               <td>{{ field.label_tag }} {{ field }}</td> 
+                            
+                        {% endfor %}
+                            
+                        </tr> 
+                        
+                        </tbody>
+                    </table>
+                       <p style="margin-top:10px;"> <input type="submit"  href="/hands/" class="btn btn-primary" role="button" type="submit" value="Вычислить результаты" />
+                    </p>
+
+                </form>
+                        
+                        
+                        
+                
+                    
+                </div>
+            </div>
+            
+        {% endblock page %}    

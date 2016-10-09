@@ -1,0 +1,75 @@
+body {
+  min-height: 2000px;
+  padding-top: 0px;
+}
+.navbar-collapse {
+    font-family: 'Poiret One';
+    font-size: 17pt;
+    font-weight: 500;
+    background-color: #ffcf48;
+}
+.navbar-default
+{
+    font-family: 'Poiret One';
+    background-color: #ffcf48;
+}
+b .btn {
+    font-weight: 400;
+   
+    font-size: 32pt;
+    color: #7d7f7d;
+    border: 0px;
+    font-family: 'Lobster';}
+
+a .btn {
+    font-weight: 550px;
+    font-size:20px;
+    color: #7d7f7d;
+    border: 0px;
+    font-family: 'Poiret One';
+   
+    
+}
+.panel > .panel-heading {
+    background-image: none;
+    background-color:#ffcf48;
+    color: white;
+
+}
+h1 {
+    font-weight: 400;
+    padding-left: 0px;
+    font-size: 30pt;
+    font-family: 'Lobster';#Lobster, Pacifico, Amatic SC,Josefin Slab, Kaushan Script,Lobster Two, Satisfy
+}
+
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+

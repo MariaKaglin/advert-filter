@@ -1,0 +1,60 @@
+{% extends "advertising/base.html" %}
+        {% block page %}    
+            <div class="panel panel-default">    
+                <div class="panel-body">
+                <h2>Задайте функции S, p, z с помощью параметров или выберите файлы с их распределениями (выбор файла считается более приоритетным, если выбрано и то и то).</h2>
+                    <p style="color:red;">{{error}}</p>
+                <form method="post" action="{% url 'params' %}">
+                {% csrf_token %}
+                    <center>
+                        <table class="table">
+                            <thead>
+                            <td> Функция</td>
+                                <td>Путь к файлу </td>
+                                <td> a</td>
+                                <td> b</td>
+                                <td> c</td>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>S(t) = a*t + b*sin(t) + c</td>
+                                    <td>{{ form_1.file_path }}</td>
+                                    <td>{{ form_1.a}}</td>
+                                    <td>{{ form_1.b}}</td>
+                                    <td>{{ form_1.c}}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>p(w) = a*w () + c</td>
+                                    <td>{{ form_1.file_path }}</td>
+                                    <td>{{ form_1.a}}</td>
+                                    <td>{{ form_1.b}}</td>
+                                    <td>{{ form_1.c}}</td>
+                                </tr>
+                                <tr>
+                                <td>z(t)= a*t + b*cos(t) + c</td>
+                                    <td>{{ form_1.file_path }}</td>
+                                    <td>{{ form_1.a}}</td>
+                                    <td>{{ form_1.b}}</td>
+                                    <td>{{ form_1.c}}</td>
+                                </tr>
+                                
+                            </tbody>
+                            
+                        </table>
+                        <h2>{{ auto.auto_ }} Выберите этот пункт, если хотите работать в автоматическом, а не ручном режиме</h2>
+                        
+                        
+                        
+                        <input type="submit"  href="/hands/" class="btn btn-primary" role="button" type="submit" value="Продолжить" />
+                        
+                  
+                    </center>
+
+                </form>
+                    
+                </div>
+            </div>
+            
+         
+            {% endblock page %}
